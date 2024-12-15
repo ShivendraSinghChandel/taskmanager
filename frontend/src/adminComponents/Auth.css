@@ -1,0 +1,82 @@
+/* Auth.css */
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #28a745; /* Green border */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* White background */
+}
+
+.auth-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #28a745; /* Green text */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #28a745; /* Green border */
+  border-radius: 4px;
+  font-size: 16px;
+  color: #28a745; /* Green text */
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+.auth-form input:focus {
+  border-color: #218838; /* Darker green on focus */
+  outline: none;
+}
+
+.role-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.role-selection label {
+  font-size: 14px;
+  color: #28a745; /* Green text */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.role-selection input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: #28a745; /* Green radio button */
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* White text */
+  background-color: #28a745; /* Green background */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.message {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #218838; /* Dark green for success message */
+}

@@ -1,0 +1,79 @@
+/* ViewDetails.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f1; 
+  }
+  
+  .details-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: white; 
+    border: 2px solid green; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .task-title {
+    font-size: 1.5em;
+    color: #28a745; 
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .meta {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .meta span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .user-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .user-info h3 {
+    font-size: 1.2em;
+    color: #28a745; 
+    margin-bottom: 10px;
+  }
+  
+  .go-back-button {
+    display: inline-block;
+    background-color: #28a745; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .go-back-button:hover {
+    background-color: #218838; 
+  }
+  
