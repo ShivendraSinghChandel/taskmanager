@@ -21,9 +21,9 @@ const Login = ({ setAuthToken,setRoles }) => {
 
       localStorage.setItem("token", data.token);
       localStorage.setItem("role",data.role);
-      console.log(data);
       setAuthToken(data.token);
       setRoles(data.role);
+      console.log(data);
       message.success("Login successful!");
 
       if (role === "admin") {
@@ -32,7 +32,7 @@ const Login = ({ setAuthToken,setRoles }) => {
         navigate("/task");
       }
     } catch (error) {
-      message.error(error.data.data.message  || "Login failed");
+      message.error(error.response.data.message  || "Login failed");
     }
   };
 
