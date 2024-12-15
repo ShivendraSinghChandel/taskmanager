@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
+import { message } from "antd";
 
 const Login = ({ setAuthToken,setRoles }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role,setRole]=useState("");
-  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -24,7 +24,7 @@ const Login = ({ setAuthToken,setRoles }) => {
       console.log(data);
       setAuthToken(data.token);
       setRoles(data.role);
-      setMessage("Login successful!");
+      message.success("Login successful!");
 
       if (role === "admin") {
         navigate("/admindashboard");
@@ -32,7 +32,7 @@ const Login = ({ setAuthToken,setRoles }) => {
         navigate("/task");
       }
     } catch (error) {
-      setMessage(error.message  || "Login failed");
+      message.error(error.data.data.message  || "Login failed");
     }
   };
 
@@ -76,7 +76,6 @@ const Login = ({ setAuthToken,setRoles }) => {
         </div>
         <button type="submit">Login</button>
       </form>
-      {message && <p className="message">{message}</p>}
     </div>
   );
 };
